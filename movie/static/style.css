@@ -1,0 +1,13 @@
+u{
+background-color:red;
+}
+.my-button {
+  background-color: #007bff; /* Button color */
+  color: #fff; /* Text color */
+  transition: all 0.3s ease-in-out; /* Transition effect */
+}
+
+.my-button:hover {
+  background-color: red; /* Hover color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}

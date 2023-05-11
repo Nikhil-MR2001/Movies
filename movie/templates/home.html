@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<div class="row">
+  <div class="col-md-3 ">
+    <div class="card text-white bg-primary mb-3" style="max-width: 18rem; margin-top:73px; margin-left:49px">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Primary card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+    
+    <!-- add more cards here -->
+  </div>
+
+<div class="col-md-9" style="padding:15px; ">
+  <div class="row" style="padding:15px; margin:20px;">
+    {% for i in obj %}
+    <div class="col-md-4">
+      <div class="card" style="position: relative; width: 20rem; height: 400px; margin:17px">
+        <img class="card-img-top" src="{{i.image.url}}" style="height:100%; width:100%; object-fit: cover;">
+        <div class="card-body" style="position: absolute; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.6);">
+          <h5 class="card-title" style="margin-bottom: 0;">
+            <a href="{% url 'movieapp:Detail' i.id %}">
+              <button class="btn btn-primary" style="background-color: aqua; border:none; font-weight:bold; padding: 8px 20px; border-radius: 20px; transition: all 0.2s;">
+                {{i.name}}
+              </button>
+            </a>
+          </h5>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">-->
+<!--  <div class="card-header">Header</div>-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Primary card title</h5>-->
+<!--    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">-->
+<!--  <div class="card-header">Header</div>-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Secondary card title</h5>-->
+<!--    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="card text-white bg-success mb-3" style="max-width: 18rem;">-->
+<!--  <div class="card-header">Header</div>-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Success card title</h5>-->
+<!--    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="card text-white bg-danger mb-3" style="max-width: 18rem;">-->
+<!--  <div class="card-header">Header</div>-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Danger card title</h5>-->
+<!--    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="card text-white bg-warning mb-3" style="max-width: 18rem;">-->
+<!--  <div class="card-header">Header</div>-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Warning card title</h5>-->
+<!--    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="card text-white bg-info mb-3" style="max-width: 18rem;">-->
+<!--  <div class="card-header">Header</div>-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Info card title</h5>-->
+<!--    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="card bg-light mb-3" style="max-width: 18rem;">-->
+<!--  <div class="card-header">Header</div>-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Light card title</h5>-->
+<!--    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">-->
+<!--  <div class="card-header">Header</div>-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Dark card title</h5>-->
+<!--    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--<div class="container">-->
+<!--    <div class="row" style="padding:15px;">-->
+<!--        {% for i in obj %}-->
+<!--        <div class="col-md-4">-->
+
+<!--<div class="card" style="width: 16rem;">-->
+<!--<img class="card-img-top" src="{{i.image.url}}" style="height:155px">-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title"><a href="{% url 'movieapp:Detail' i.id %}">{{i.name}}</a></h5>-->
+
+<!--  </div>-->
+<!--</div>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
